@@ -1,0 +1,85 @@
+/* Add your CSS styles here */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('pacmanbackground.jpg');
+    background-size: cover; /* Set the background image to cover the entire section */
+    background-repeat: no-repeat;
+    background-position: center; /* Center the background image */
+    opacity: 0; /* Initially hide the section */
+    animation: fadeIn 1s ease forwards; /* Apply the fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* End with opacity 1 */
+    }
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    color: rgb(243, 183, 17);
+    text-align: center;
+    padding-top: 240px;
+    font-size: 35px;
+    transform: translateX(-100%); /* Start the title outside the viewport */
+    animation: slideIn 1s ease forwards; /* Apply the slide-in animation */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50%); /* Start outside the viewport */
+    }
+    to {
+        transform: translateX(0); /* End at its original position */
+    }
+}
+
+ol {
+    transform: translateY(100%); /* Start the list below the viewport */
+    animation: slideInList 1s ease forwards; /* Apply the slide-in animation */
+}
+
+@keyframes slideInList {
+    from {
+        transform: translateY(100%); /* Start below the viewport */
+    }
+    to {
+        transform: translateY(0); /* End at its original position */
+    }
+}
+
+ol li {
+    color: rgb(243, 183, 243); /* Set text color to white */
+    padding-left: 340px; /* Remove default padding */
+    padding-top: 10px;
+    list-style-position: inside; /* Keep the list marker inside the list item */
+    font-size: 22px; /* Increase the font size as needed */
+}
+
+a {
+    margin-top: 20px; /* Adjust margin to separate from the list */
+}
+
+button {
+    font-family: Arial, sans-serif; /* Set font family */
+    font-size: 20px; /* Set font size */
+    padding: 10px 20px; /* Set padding */
+    background-color: rgb(243, 183, 17); /* Set background color */
+    color: white; /* Set text color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Add cursor pointer on hover */
+    border-radius: 10px; /* Set border radius to make edges round */
+}
